@@ -1,0 +1,11 @@
+project(world)
+add_library(editor SHARED editor.c)
+add_library(timer SHARED timer.c)
+add_library(menu SHARED menu.c)
+add_library(structure SHARED structure.c)
+add_library(draw SHARED draw.c)
+
+target_link_libraries(editor ${OPENGL_LIBRARIES} SDL)
+target_link_libraries(menu ${OPENGL_LIBRARIES} SDL)
+target_link_libraries(timer SDL)
+target_link_libraries(draw ${OPENGL_LIBRARIES} SDL ${SDLIMAGE_LIBRARY})

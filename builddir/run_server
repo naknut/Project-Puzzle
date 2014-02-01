@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export LD_LIBRARY_PATH="./libs"
+
+if [[ $1 != "" ]]
+then
+	./bins/server $1
+else
+	./bins/server 6
+fi
